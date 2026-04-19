@@ -130,3 +130,6 @@ stash-it/
 │   └── privacy_policy.html  — bundled privacy policy
 └── README.md
 ```
+
+## License
+© 2026 dedicatoriaDev. All rights reserved. See `LICENSE` for details.
