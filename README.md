@@ -1,10 +1,17 @@
-# 📌 Stash It v4.12
+# 📌 Stash It v4.14
 
 A lightweight browser extension that gives you a floating image tray on any page.
 Drag images in, drag them back out. Your stash syncs instantly across every open tab
 and persists across browser restarts.
 
+> **Now available on the Firefox Add-ons store (AMO)!**
+> 🦊 Search **Stash It** on [addons.mozilla.org](https://addons.mozilla.org) to install in one click.
+
 ---
+
+## What's new in v4.14
+- Version bump and consistency improvements.
+- README and packaging updated to reflect current release.
 
 ## What's new in v4.12
 - **Toolbar button** — pin Stash It to your toolbar for instant access. Click to open
@@ -45,8 +52,11 @@ and persists across browser restarts.
 
 ## Install
 
-### Firefox (recommended — listed on AMO)
-Search **Stash It** on [addons.mozilla.org](https://addons.mozilla.org), or sideload:
+### Firefox (recommended — available on AMO)
+Install directly from the store:
+👉 [addons.mozilla.org](https://addons.mozilla.org) — search **Stash It**
+
+Or sideload for development:
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on…**
 3. Select `firefox/manifest.json`
@@ -111,19 +121,12 @@ If Stash It saves you time, consider buying a coffee:
 
 ```
 stash-it/
-├── chrome/
-│   ├── manifest.json        — MV3 manifest (Chrome / Edge / Brave)
-│   ├── background.js        — service worker: storage fan-out + toolbar toggle
+├── firefox/
+│   ├── manifest.json        — MV2 manifest
+│   ├── background.js        — background script: storage fan-out + toolbar toggle
 │   ├── content.js           — full tray UI injected into every page
 │   ├── icon48.png           — toolbar / listing icon
 │   ├── icon96.png           — high-DPI icon
 │   └── privacy_policy.html  — bundled privacy policy
-├── firefox/
-│   ├── manifest.json        — MV2 manifest (Firefox, gecko id included)
-│   ├── background.js        — background script (same logic as Chrome)
-│   ├── content.js           — identical to chrome/content.js
-│   ├── icon48.png
-│   ├── icon96.png
-│   └── privacy_policy.html
 └── README.md
 ```
