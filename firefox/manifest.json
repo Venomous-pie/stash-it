@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Stash It",
+  "version": "4.14",
+  "description": "Floating image tray — drag images in, drag them back out. Synced across all tabs.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "stash-it@extension",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
+    }
+  },
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon96.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon48.png",
+      "96": "icon96.png"
+    },
+    "default_title": "Stash It — open image tray"
+  },
+  "permissions": [
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

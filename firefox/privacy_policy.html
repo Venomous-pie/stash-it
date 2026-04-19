@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stash It — Privacy Policy</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 640px; margin: 48px auto; padding: 0 24px;
+      color: #1a1a1a; line-height: 1.65; font-size: 15px;
+    }
+    h1 { font-size: 22px; margin-bottom: 6px; }
+    h2 { font-size: 16px; margin: 28px 0 6px; }
+    p  { margin: 0 0 14px; }
+    .meta { color: #666; font-size: 13px; margin-bottom: 32px; }
+    a  { color: #0060df; }
+  </style>
+</head>
+<body>
+  <h1>Stash It — Privacy Policy</h1>
+  <p class="meta">Last updated: April 2026 &nbsp;·&nbsp; Version 4.12</p>
+
+  <h2>What Stash It does</h2>
+  <p>Stash It is a browser extension that lets you drag images from any webpage into a
+  floating tray and drag them back out again. Your stashed images sync across your open
+  tabs in real time.</p>
+
+  <h2>Data we collect</h2>
+  <p><strong>None.</strong> Stash It does not collect, transmit, or share any personal
+  data. No analytics, no telemetry, no tracking of any kind.</p>
+
+  <h2>Local storage only</h2>
+  <p>Images you stash are stored exclusively in your browser's local extension storage
+  (<code>chrome.storage.local</code>). This data never leaves your device. It is not
+  sent to any server — not to the developer, not to any third party.</p>
+
+  <h2>Network requests</h2>
+  <p>Stash It makes one type of outbound network request: when you drop an image URL
+  onto the tray, the extension may attempt a <code>fetch()</code> to download that
+  image for local storage. This request goes directly to the image's original host —
+  the same server your browser would contact anyway to display the image. No data about
+  you is included in this request beyond what a normal browser request contains
+  (e.g. your IP address as seen by that server).</p>
+  <p>If the fetch fails (e.g. due to CORS restrictions), no data is stored and a
+  toast notification informs you of the failure.</p>
+
+  <h2>Permissions</h2>
+  <p>Stash It requests the following permissions:</p>
+  <p><strong>storage</strong> — to save and sync your stashed images and tray
+  preferences (position, size, mode) locally in your browser.</p>
+  <p><strong>&lt;all_urls&gt;</strong> — to inject the tray UI on every page you
+  visit, so you can stash images from any site. This permission is not used to
+  read, monitor, or transmit any content from the pages you visit.</p>
+
+  <h2>Ko-fi donation link</h2>
+  <p>The tray includes a one-time dismissible link to the developer's Ko-fi page
+  (<a href="https://ko-fi.com/kanameshizu" target="_blank" rel="noopener">ko-fi.com/kanameshizu</a>).
+  Clicking it opens Ko-fi in a new tab. Stash It does not track whether you click it
+  or donate. The link can be permanently dismissed by clicking ×, and your choice is
+  stored locally.</p>
+
+  <h2>Contact</h2>
+  <p>Questions? Reach the developer at
+  <a href="https://ko-fi.com/kanameshizu">ko-fi.com/kanameshizu</a>.</p>
+</body>
+</html>
