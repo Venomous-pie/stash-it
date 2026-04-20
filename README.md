@@ -1,4 +1,12 @@
-# 📌 Stash It v4.14
+<div align="center">
+
+# 📌 Stash It
+
+[![Version](https://img.shields.io/badge/version-4.14-blue.svg)](#)
+[![Platform](https://img.shields.io/badge/platform-Firefox%20%7C%20Chrome%20%7C%20Edge%20%7C%20Brave-blueviolet.svg)](#)
+[![License](https://img.shields.io/badge/license-Proprietary-green.svg)](#)
+
+</div>
 
 A lightweight browser extension that gives you a floating image tray on any page.
 Drag images in, drag them back out. Your stash syncs instantly across every open tab
@@ -6,47 +14,6 @@ and persists across browser restarts.
 
 > **Now available on the Firefox Add-ons store (AMO)!**
 > 🦊 Search **Stash It** on [addons.mozilla.org](https://addons.mozilla.org) to install in one click.
-
----
-
-## What's new in v4.14
-- Version bump and consistency improvements.
-- README and packaging updated to reflect current release.
-
-## What's new in v4.12
-- **Toolbar button** — pin Stash It to your toolbar for instant access. Click to open
-  the tray at any time — no need to drag an image first.
-- **No external fonts** — Google Fonts removed; fully self-contained per AMO policy.
-  The tray now uses your system UI font, which looks great and loads instantly.
-- **Ko-fi support link** — a one-time dismissible footer lets you support the developer.
-  Clicking × permanently hides it. The extension works identically either way.
-- **Bundled privacy policy** — `privacy_policy.html` included in the extension package.
-- **Icons** — proper 48×96 px icons for the toolbar and AMO listing.
-- **AMO-ready packaging** — Firefox `.xpi` structured correctly for store upload.
-
-## What's new in v4.11
-- **ID collision fix** — image IDs safely anchored above highest persisted ID.
-- **Cross-tab mode sync fixed** — closing on one tab now correctly hides on all tabs.
-- **Smooth close animation** — tray fades out before hiding instead of snapping away.
-- **CORS error handling** — failed URL fetches show a clear toast, no broken thumbnail.
-- **Storage quota warning** — toast warns when stash approaches ~8 MB browser limit.
-
-## What's new in v4.4
-- **X button no longer clears images** — closing just hides the tray; stash is preserved.
-- **Clear All is the only way to wipe your stash.**
-
-## What's new in v4.3
-- No more flash on load — tray stays hidden until position/size/mode are loaded.
-- Ghost drag fixed — custom drag ghost tracks cursor correctly across the full page.
-
-## What's new in v4.2
-- Auto-minimize on resize — drag to minimum size and it snaps to the minimized pill.
-
-## What's new in v4.1
-- Resize lag fixed. Version tracking added.
-
-## What's new in v4
-- Drag, sentinel reset, close/minimize reliability, and mode-on-load all fixed.
 
 ---
 
@@ -133,3 +100,7 @@ stash-it/
 
 ## License
 © 2026 dedicatoriaDev. All rights reserved. See `LICENSE` for details.
+
+---
+
+📝 **See [CHANGELOG.md](CHANGELOG.md) for full version history.**
