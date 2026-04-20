@@ -1,0 +1,44 @@
+name: stash-it CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install web-ext
+        run: npm install -g web-ext
+
+      - name: Lint Firefox extension
+        run: web-ext lint --source-dir=firefox/
+
+      - name: Package extension (.xpi)
+        run: web-ext build --source-dir=firefox/ --artifacts-dir=artifacts/ --filename=stash-it-{version}.xpi
+
+      - name: Upload .xpi artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stash-it-firefox
+          path: artifacts/*.xpi
+
+      - name: Sign & upload to AMO
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          web-ext sign \
+            --source-dir=firefox/ \
+            --artifacts-dir=artifacts/ \
+            --api-key=${{ secrets.AMO_KEY }} \
+            --api-secret=${{ secrets.AMO_SECRET }}
